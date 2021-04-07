@@ -1,30 +1,16 @@
 import * as React from "react";
 import { SafeAreaView, Text, View } from "react-native";
+import { tw2 } from "../tw";
 
 type SuperImportantToastProps = {};
 
 export const SuperImportantToast: React.FC<SuperImportantToastProps> = () => {
   return (
-    <View
-      style={{ position: "absolute", width: "100%", zIndex: 10 }}
-      pointerEvents="none"
-    >
+    <View style={tw2(["absolute", "w-full", "z-10", "pointer-events-none"])}>
       <SafeAreaView>
-        <View
-          style={{
-            padding: 10,
-            flexDirection: "row",
-            justifyContent: "center",
-          }}
-        >
-          <View
-            style={{
-              backgroundColor: "#cd1616",
-              padding: 10,
-              borderRadius: 10,
-            }}
-          >
-            <Text style={{ color: "white", fontWeight: "bold" }}>
+        <View style={tw2(["p-4", "flex-row", "justify-center"])}>
+          <View style={tw2(["bg-red-600", "px-4", "py-2", "rounded-full"])}>
+            <Text style={tw2(["text-white", "font-bold"])}>
               Super important message!!!
             </Text>
           </View>
